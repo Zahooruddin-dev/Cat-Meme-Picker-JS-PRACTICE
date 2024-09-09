@@ -2,10 +2,21 @@ import { catsData } from './data.js';
 const emotionRadio = document.getElementById('emotion-radios');
 emotionRadio.addEventListener('change', highlightCheckedOption);
 function highlightCheckedOption(e) {
-    document.getElementById(e.target.id).parentElement.classList.add('highlight');
-	console.log(e.target.id);
+	/*
+Challenge:
+1. Create an array of all items that have 
+   the "radio" class.
+2. Iterate over the array and remove the 
+   "highlight" class from each one.
+*/
 
+	const radios = document.getElementsByClassName('radio');
+	for (let radio of radios) {
+		radio.classList.remove('highlight');
+	}
+	document.getElementById(e.target.id).parentElement.classList.add('highlight');
 }
+
 function getEmotionsArray(cats) {
 	const emotionsArray = [];
 	for (let cat of cats) {
