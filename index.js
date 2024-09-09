@@ -1,8 +1,21 @@
 import { catsData } from './data.js';
 const emotionRadio = document.getElementById('emotion-radios');
-emotionRadio.addEventListener('change',(e)=>{
-    console.log(e.target.id);
-})
+emotionRadio.addEventListener('change',highlightCheckedOption)
+
+/*
+Challenge:
+1. highlightCheckedOption should take control 
+   of the selected radio input and add the CSS
+   class of "highlight" to its classlist
+*/ 
+function highlightCheckedOption(e){
+/*
+Challenge:
+1. highlightCheckedOption should take control 
+   of the selected radio input and add the CSS
+   class of "highlight" to its classlist
+*/
+    console.log(e.target.id);}
 
 function getEmotionsArray(cats) {
 	const emotionsArray = [];
