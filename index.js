@@ -38,17 +38,23 @@ function getMatchingCatsArray() {
 function getSingleCatObject() {
 	const catsArray = getMatchingCatsArray();
 	if (catsArray.length === 1) {
-		console.log(catsArray[0]);
+		return (catsArray[0]);
 	}
     else{
         const ran= Math.floor(Math.random() * catsArray.length)
-        console.log(catsArray[ran]);
+        return (catsArray[ran]);
         
     }
 }
 
 function renderCat(){
-    /*
+    const catObject = getSingleCatObject()
+    memeModalInner.innerHTML=     `<img 
+    class="cat-img" 
+    src="./images/${catObject.image}"
+    alt="${catObject.alt}"
+    >`
+    memeModal.style.display = 'flex'    /*
     Challenge:
     1. Take the object that is returned by 
        getSingleCatObject and save it to a const 
@@ -58,11 +64,7 @@ function renderCat(){
        data from catObject to replace the UPPERCASE text.
     3. Set memeModal’s display property to "flex". 
      
-           `<img 
-            class="cat-img" 
-            src="./images/CAT IMAGE"
-            alt="CAT ALT TEXT"
-            >`
+       
     */ 
     }
 function getEmotionsArray(cats) {
